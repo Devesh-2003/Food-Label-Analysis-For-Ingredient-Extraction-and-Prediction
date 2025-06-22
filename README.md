@@ -1,0 +1,1 @@
+# Food-Label-Analysis-For-Ingredient-Extraction-and-Prediction

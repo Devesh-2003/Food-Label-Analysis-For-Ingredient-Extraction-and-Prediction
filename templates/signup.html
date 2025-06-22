@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="./static/style2.css" />
+</head>
+<body>
+  <header>
+    Food Check
+  </header>
+  <div class="form-box">
+    <h2>Sign Up</h2>
+    <form method="POST" onsubmit="return validatePasswordLength()">
+      <input type="text" name="userid" placeholder="User ID" required>
+      <input type="password" name="password" id="password" placeholder="Password" required>
+      <p id="password-length-message" style="font-size: 0.9rem;"></p>
+      <button type="submit">Sign Up</button>
+    </form>
+    <a href="/login">Back to Login</a>
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  </div>
+
+  <script>
+    function validatePasswordLength() {
+      const password = document.getElementById("password").value;
+      const messageBox = document.getElementById("password-length-message");
+
+      if (password.length < 8) {
+        messageBox.textContent = "Password must be at least 8 characters.";
+        messageBox.style.color = "red";
+        return false;
+      }
+
+      messageBox.textContent = "";
+      return true;
+    }
+  </script>
+</body>
+</html>

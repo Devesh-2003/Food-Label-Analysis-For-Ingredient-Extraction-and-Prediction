@@ -1,0 +1,104 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 0;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f5f8fa;
+  color: #333;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+input,
+textarea,
+button,
+select {
+  display: block;
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.section {
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.label {
+  font-weight: bold;
+  margin-top: 15px;
+  color: #444;
+}
+
+#ingredients-list {
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background-color: #eef6fb;
+  border-radius: 8px;
+}
+
+#score-result {
+  padding: 15px;
+  background-color: #eef6fb;
+  color: #2c3e50;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#message-box {
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+}
+
+.message-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message-error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+/* Navbar header */
+header {
+  background-color: #3498db;
+  color: #ecf0f1;               
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  user-select: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}

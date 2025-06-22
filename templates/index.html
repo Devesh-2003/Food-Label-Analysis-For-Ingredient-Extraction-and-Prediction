@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ingredient Suitability Checker</title>
+  <link rel="stylesheet" href="../static/style.css" />
+
+</head>
+<body>
+
+  <header>
+    Food Check
+  </header>
+
+  <h1></h1>
+
+  <div class="section">
+    <label class="label">Upload Image of Ingredients:</label>
+    <input type="file" id="image" />
+    <button onclick="extractIngredients()">Extract Ingredients</button>
+    <div id="ingredients-list"></div>
+  </div>
+
+  <div class="section">
+    <label class="label">Likes (comma-separated):</label>
+    <input type="text" id="likes" placeholder="e.g., milk, honey" />
+
+    <label class="label">Dislikes (comma-separated):</label>
+    <input type="text" id="dislikes" placeholder="e.g., sugar, oil" />
+
+    <label class="label">Dietary Preference:</label>
+    <select id="preference" onchange="applyDietaryPreference()">
+      <option value="">None</option>
+      <option value="vegan">Vegan</option>
+      <option value="dairy_free">Dairy-Free</option>
+      <option value="halal">Halal</option>
+      <option value="gluten_free">Gluten-Free</option>
+    </select>
+
+    <label class="label">Allergens (comma-separated):</label>
+    <input type="text" id="allergens" placeholder="e.g., nuts, gluten" />
+
+    <button onclick="savePreferences()">Save Preferences</button>
+    <div id="message-box"></div>
+    <button onclick="predictSuitability()">Check Suitability</button>
+  </div>
+
+  <div class="section">
+    <h3>Suitability Score:</h3>
+    <div id="score-result" class="score-default">Not yet calculated</div>
+  </div>
+
+  <script src="./static/script.js"></script>
+</body>
+</html>
